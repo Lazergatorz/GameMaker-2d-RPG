@@ -7,7 +7,7 @@ scr_get_input();
 // check if dashing
 if (dash_key){   
     state = scr_player_dash_state;
-    alarm[0] = room_speed/8;  // dash for 3.75 frames
+    alarm[0] = room_speed/7;  // dash duration 
 }
 
 // determine movement direction in 360
