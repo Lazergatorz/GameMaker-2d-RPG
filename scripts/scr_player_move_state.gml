@@ -10,6 +10,13 @@ if (dash_key){
     alarm[0] = room_speed/6;  // dash duration 
 }
 
+// check if attacking
+if (attack_key){   
+    // reset to frame 0 for attack anim
+    image_index = 0;
+    state = scr_player_attack_state;    
+}
+
 // determine movement direction in 360
 
 dir = point_direction(0,0,xaxis,yaxis);
