@@ -26,11 +26,25 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_get_input.gml</script>
-    <script>scripts\scr_player_move_state.gml</script>
-    <script>scripts\scr_player_dash_state.gml</script>
-    <script>scripts\scr_player_attack_state.gml</script>
-    <script>scripts\scr_get_facing.gml</script>
+    <scripts name="Helper scripts">
+      <script>scripts\scr_get_input.gml</script>
+      <script>scripts\scr_get_facing.gml</script>
+    </scripts>
+    <scripts name="Player states">
+      <script>scripts\scr_player_move_state.gml</script>
+      <script>scripts\scr_player_dash_state.gml</script>
+      <script>scripts\scr_player_attack_state.gml</script>
+    </scripts>
+    <scripts name="Enemy states">
+      <script>scripts\scr_enemy_idle_state.gml</script>
+      <script>scripts\scr_enemy_stall_state.gml</script>
+      <script>scripts\scr_enemy_wander_state.gml</script>
+      <script>scripts\scr_enemy_chase_state.gml</script>
+      <scripts name="Enemy helper scripts">
+        <script>scripts\scr_enemy_choose_next_state.gml</script>
+        <script>scripts\scr_check_for_player.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_actor_parent</object>

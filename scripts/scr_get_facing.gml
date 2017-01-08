@@ -1,4 +1,4 @@
-///scr_get_facing();
+///scr_get_facing()
 
 // set facing on 4 dimensional axis, starting right
 

@@ -1,4 +1,4 @@
-///scr_player_move_state
+///scr_player_move_state()
 
 // get inputs
 

@@ -1,4 +1,4 @@
-///scr_get_input
+///scr_get_input()
 
 // pc keyboard
 right_key = keyboard_check(vk_right);

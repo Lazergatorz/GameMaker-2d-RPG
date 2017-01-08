@@ -1,4 +1,4 @@
-///scr_player_dash_state
+///scr_player_dash_state()
 
 // dash speed 
 len = spd * 4;
