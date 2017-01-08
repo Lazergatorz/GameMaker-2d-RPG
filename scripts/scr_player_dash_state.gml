@@ -1,9 +1,14 @@
 ///scr_player_dash_state()
 
+// set the horizontal and vertical speed
+if (len == 0)
+{   
+    // fix dashing direction when standing still
+    dir = facing * 90;
+}    
+
 // dash speed 
 len = spd * 4;
-
-// set the horizontal and vertical speed
 
 hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);

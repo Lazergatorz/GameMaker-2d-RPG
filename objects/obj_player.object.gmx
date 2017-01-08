@@ -103,10 +103,15 @@ state = scr_player_move_state;
             <kind>1</kind>
             <string>/// update player
 
-// inherit from actor parent
-event_inherited();
 
+depth = -y;
+// set player state
 script_execute(state);
+
+// player death check
+if(obj_player_stats.hp &lt;= 0){
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
