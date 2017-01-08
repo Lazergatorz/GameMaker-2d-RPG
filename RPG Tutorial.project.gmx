@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprites name="Player">
       <sprite>sprites\spr_player_up</sprite>
@@ -31,6 +30,7 @@
     <script>scripts\scr_player_move_state.gml</script>
     <script>scripts\scr_player_dash_state.gml</script>
     <script>scripts\scr_player_attack_state.gml</script>
+    <script>scripts\scr_get_facing.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_actor_parent</object>
