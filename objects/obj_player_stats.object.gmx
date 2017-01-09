@@ -32,7 +32,9 @@ maxhp = hp;
 stamina = 10;
 maxstamina = stamina;
 level = 1;
-
+xp = 0;
+maxxp = 3;
+attackstr = 1;
 
 </string>
           </argument>
@@ -89,6 +91,7 @@ if (hp &lt; 0 ){
 draw_text(32,16, "HP: "+ string(hp) + "/" + string(maxhp));
 draw_text(32,32, "STA: "+ string(stamina) + "/" + string(maxstamina));
 draw_text(32,48, "LVL: "+ string(level));
+draw_text(32,64, "XP: "+ string(xp) + "/" + string(maxxp));
 </string>
           </argument>
         </arguments>

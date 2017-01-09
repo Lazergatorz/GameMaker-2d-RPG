@@ -43,5 +43,7 @@ if(image_index >= 3 && hasattacked == false){
     }       
     var damage = instance_create(xx,yy,obj_damage); //instantiate damage object to collide 
     damage.creator = id; // set originator
+    // set damage to current level attack strength
+    damage.damage = obj_player_stats.attackstr;
     hasattacked = true;
 }

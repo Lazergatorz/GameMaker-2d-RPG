@@ -117,6 +117,60 @@ if(obj_player_stats.hp &lt;= 0){
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_xp_point">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// collide with xp point object
+
+// pick up on collision and add xp
+with(other){
+    instance_destroy();
+}
+
+with (obj_player_stats){
+
+    // player level determines the worth of xp objects 
+    // (scale xp increase to player level)
+    
+      xp += 1 / level;
+    
+    // check for levelup
+      if (xp &gt;= maxxp){
+        level += 1;
+        // carry over xp to next level, if any
+        xp = xp-maxxp;
+        // set new maxxp for new level
+        // linear
+        // maxxp += 3;
+        // exponential (scale)
+        maxxp *= 2;
+        // increase stats to reflect levelup
+        hp += 2;
+        maxhp += 2;
+        stamina += 2;
+        maxstamina += 2;       
+        attackstr +=1;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="7">
       <action>
         <libid>1</libid>
