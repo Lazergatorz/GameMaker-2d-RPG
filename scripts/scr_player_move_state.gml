@@ -4,10 +4,14 @@
 
 scr_get_input();
 
-// check if dashing
-if (dash_key){   
+// check if dashing and enough stamina (via macro) 
+if (dash_key && obj_player_stats.stamina >= DASH_COST){   
     state = scr_player_dash_state;
     alarm[0] = room_speed/6;  // dash duration 
+    // use up stamina for dash
+    obj_player_stats.stamina -= DASH_COST;
+    // set stamina regen time
+    obj_player_stats.alarm[0] = room_speed; // 30 frames (1sec)
 }
 
 // check if attacking

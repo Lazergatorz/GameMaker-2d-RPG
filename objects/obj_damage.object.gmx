@@ -86,11 +86,19 @@ instance_destroy();
 // do damage to the actor that is collided with
 
 if (other.id != creator){
+
     obj_player_stats.hp -= damage; // deal damage
     // apply knockback effect
-    var dir = point_direction(creator.x, creator.y, other.x, other.y); // direction to target
+    if(instance_exists(creator)){
+        // direction from target to creator of damage
+        var dir = point_direction(creator.x, creator.y, other.x, other.y); 
+    } else {
+        // in case target ceased to exist we use local coords
+        var dir = point_direction(x, y, other.x, other.y); 
+    }
     var xforce = lengthdir_x(knockback, dir); // amount of distance x
     var yforce= lengthdir_y(knockback, dir); // amount of distance y
+    
     // apply to target
     with (other){
         // executes in target
@@ -128,7 +136,13 @@ if (other.id != creator){
 if (other.id != creator){
     other.hp -= damage; // deal damage
     // apply knockback effect
-    var dir = point_direction(creator.x, creator.y, other.x, other.y); // direction to target
+    if(instance_exists(creator)){
+        // direction of target creator of damage
+        var dir = point_direction(creator.x, creator.y, other.x, other.y); 
+    } else {
+        // in case target ceased to exist, we use local coords
+        var dir = point_direction(x,y, other.x, other.y);
+    }
     var xforce = lengthdir_x(knockback, dir); // amount of distance x
     var yforce= lengthdir_y(knockback, dir); // amount of distance y
     // apply to target
