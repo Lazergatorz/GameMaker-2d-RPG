@@ -117,6 +117,74 @@ if(obj_player_stats.hp &lt;= 0){
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_healthfull_drop">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// collide with full health point object
+
+// pick up on collision and recover hp
+
+with(other){
+    instance_destroy();
+}
+
+with (obj_player_stats){
+      // recover full hp 
+      hp = maxhp;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_health_drop">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// collide with health point object
+
+// pick up on collision and recover hp
+
+with(other){
+    instance_destroy();
+}
+
+with (obj_player_stats){
+      // add hp 
+      hp = min(hp + 2, maxhp); //add 5 hp but keep limit to maxhp
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_door">
       <action>
         <libid>1</libid>

@@ -22,6 +22,8 @@
     <sprite>sprites\spr_enemy_slime</sprite>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_xp_point</sprite>
+    <sprite>sprites\spr_health</sprite>
+    <sprite>sprites\spr_health_full</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -31,6 +33,7 @@
     <scripts name="Helper scripts">
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_get_facing.gml</script>
+      <script>scripts\scr_chance.gml</script>
     </scripts>
     <scripts name="Player states">
       <script>scripts\scr_player_move_state.gml</script>
@@ -58,6 +61,8 @@
     <object>objects\obj_damage</object>
     <object>objects\obj_player_stats</object>
     <object>objects\obj_xp_point</object>
+    <object>objects\obj_health_drop</object>
+    <object>objects\obj_healthfull_drop</object>
     <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">
