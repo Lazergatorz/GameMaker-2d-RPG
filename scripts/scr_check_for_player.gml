@@ -8,7 +8,8 @@ if(instance_exists(obj_player)){
     // check if player is within aggro range, set to chase
     if (dis < sight){
         state = scr_enemy_chase_state;
-        spd = 1.5;
+        
+        spd = 1.2;
         targetx = obj_player.x;
         targety = obj_player.y;
     } else {
