@@ -78,7 +78,7 @@ instance_create(x,y,obj_xp_point);
 // randomly drop health packs 50% chance)
 if(scr_chance(.5)){
     instance_create(x+random_range(-7,7),y+random_range(-7,7),obj_health_drop); // prevent it from dropping on top of other loot
-} else if (scr_chance(.4)){
+} else if (scr_chance(.25)){
     instance_create(x+random_range(-7,7),y+random_range(-7,7),obj_healthfull_drop); // prevent it from dropping on top of other loot
 }
 
