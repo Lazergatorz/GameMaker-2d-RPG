@@ -37,6 +37,7 @@
       <script>scripts\scr_get_facing.gml</script>
       <script>scripts\scr_chance.gml</script>
       <script>scripts\scr_str_copy_words.gml</script>
+      <script>scripts\scr_save_game.gml</script>
     </scripts>
     <scripts name="Player states">
       <script>scripts\scr_player_move_state.gml</script>
@@ -57,12 +58,12 @@
   <objects name="objects">
     <object>objects\obj_actor_parent</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_player_stats</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_view</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_enemy_slime</object>
     <object>objects\obj_damage</object>
-    <object>objects\obj_player_stats</object>
     <object>objects\obj_xp_point</object>
     <object>objects\obj_health_drop</object>
     <object>objects\obj_healthfull_drop</object>

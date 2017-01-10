@@ -36,6 +36,8 @@ xp = 0;
 maxxp = 3;
 attackstr = 1;
 draw_set_colour(c_white);
+// keep track of rooms for pause menu
+previous_room = room;
 </string>
           </argument>
         </arguments>
@@ -81,7 +83,7 @@ draw_set_colour(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// player stats update
+            <string>///player stats update
 
 // prevent negative hp
 if (hp &lt; 0 ){
@@ -93,6 +95,31 @@ if (hp &lt; 0 ){
 
 if (stamina &lt; maxstamina  &amp;&amp; alarm[0] == -1){
     stamina++;
+}
+
+
+// pause 
+
+if(obj_input.pause_key){
+    if(room != rm_pause_menu){
+        // make sure player and stats do not appear in pause menu (room)
+        if(instance_exists(obj_player)){
+            obj_player.persistent = false; 
+        }
+        if(instance_exists(obj_player_stats)){
+            obj_player_stats.visible = false; 
+        }
+        // store room player is in before pause
+        previous_room = room;
+        // display pause menu
+        room_goto(rm_pause_menu);
+        
+    } else {
+        // exit pause screen and display room player was in
+        room_goto(previous_room);        
+    }
+    // can not trigger pause when in pause state
+    obj_input.pause_key = false;
 }
 </string>
           </argument>

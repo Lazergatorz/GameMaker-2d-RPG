@@ -84,24 +84,26 @@ menu_index = 0;
             <kind>1</kind>
             <string>///update pause menu
 
-// input delay
+// menu input delay
 if(alarm[0] &lt;= 0 ){
+    
+    // menu nav
     
     if(obj_input.down_key ){ 
         
-        // move and loop through menu 
+        // move down and loop through menu 
         if(menu_index &lt; array_length_1d(option) - 1){
             menu_index++;
         } else {
             menu_index = 0;
         }
-        //reset alarm
+        //reset alarm so we can move to next item
         alarm[0] = room_speed/3;
     }
     
     if(obj_input.up_key ){ 
         
-        // move and loop through menu 
+        // move up and loop through menu 
         if(menu_index &gt; 0){
             menu_index--;
         } else {
@@ -110,8 +112,31 @@ if(alarm[0] &lt;= 0 ){
         //reset alarm
         alarm[0] = room_speed/3;
     }
+    
+    // menu option select    
+    if(obj_input.dash_key){
         
-
+        switch(menu_index){
+            case 0:
+                // resume game 
+                room_goto(obj_player_stats.previous_room);
+                break;
+            case 1:
+                // save game
+                scr_save_game();
+                break;
+            case 2:
+                break;                        
+            case 3:   
+                // exit game
+                game_end();
+                break;                     
+            default:
+                break;                      
+        }
+        // can not activate when already activated
+        obj_input.dash_key = false;
+    }
 }
 </string>
           </argument>

@@ -29,8 +29,7 @@
 
 scr_get_input();
 
-// keep track of rooms for pause menu
-previous_room = room;
+
 
 
 
@@ -60,28 +59,6 @@ previous_room = room;
             <string>/// get input
 
 scr_get_input();
-
-// pause 
-
-if(pause_key){
-    if(room != rm_pause_menu){
-        // make sure player and stats do not appear in pause menu (room)
-        if(instance_exists(obj_player)){
-            obj_player.persistent = false; 
-        }
-        if(instance_exists(obj_player_stats)){
-            obj_player_stats.persistent = false; 
-        }
-        // store room player is in before pause
-        previous_room = room;
-        // display pause menu
-        room_goto(rm_pause_menu);
-        
-    } else {
-        // exit pause screen and display room player was in
-        room_goto(previous_room);        
-    }
-}
 </string>
           </argument>
         </arguments>
