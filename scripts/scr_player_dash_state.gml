@@ -1,6 +1,5 @@
 ///scr_player_dash_state()
 
-// set the horizontal and vertical speed
 if (len == 0)
 {   
     // fix dashing direction when standing still

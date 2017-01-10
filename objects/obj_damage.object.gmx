@@ -62,49 +62,6 @@ instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_speaker">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// detect collision
-
-// activate the dialog through colliding with the player damage object (aka action button)
-
-with (other) {
-    if(!instance_exists(dialog)){
-        // instantiate dialog object at page 0 (default)
-        dialog = instance_create(x+xoffset,y+yoffset,obj_dialog);
-        dialog.text = text; // set speaker text to dialog
-    } else {
-        // proceed to next page
-        dialog.text_page++;
-        dialog.text_count = 0; //next page text starts at beginning
-        // make sure we cannot go beyond dialog text page array size
-        if(dialog.text_page &gt; array_length_1d(dialog.text)-1){
-            with (dialog) {
-                instance_destroy();
-            }
-        }
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_player">
       <action>
         <libid>1</libid>

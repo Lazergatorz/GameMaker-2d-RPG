@@ -4,14 +4,43 @@
 
 scr_get_input();
 
-// check if dashing and enough stamina (via macro) 
-if (dash_key && obj_player_stats.stamina >= DASH_COST){   
-    state = scr_player_dash_state;
-    alarm[0] = room_speed/6;  // dash duration 
-    // use up stamina for dash
-    obj_player_stats.stamina -= DASH_COST;
-    // set stamina regen time
-    obj_player_stats.alarm[0] = room_speed; // 30 frames (1sec)
+// handle interact key/button (formerly dash key)
+if (dash_key){   
+
+    // field of player view to check (8 px wide)
+    var xdir = lengthdir_x(8, facing*90);
+    var ydir = lengthdir_y(8, facing*90);
+    var speaker = instance_place(x+xdir, y+ydir, obj_speaker); // check if collision with speaker and return it's id 
+
+    // collided with speaker or dash?    
+    if(speaker != noone){
+        // we hit a speaker, activate the dialog object        
+        with (speaker){
+            if(!instance_exists(dialog)){
+                // instantiate dialog object at page 0 (default)
+                dialog = instance_create(x+xoffset,y+yoffset,obj_dialog);
+                dialog.text = text; // set speaker text to dialog
+            } else {
+                // proceed to next page
+                dialog.text_page++;
+                dialog.text_count = 0; //next page text starts at beginning
+                // make sure we cannot go beyond dialog text page array size
+                if(dialog.text_page > array_length_1d(dialog.text)-1){
+                    with (dialog) {
+                        instance_destroy();
+                    }
+                }
+            }
+        }
+    } else if(obj_player_stats.stamina >= DASH_COST){
+        // we enough stamina (via macro) so dash 
+        state = scr_player_dash_state;
+        alarm[0] = room_speed/6;  // dash duration 
+        // use up stamina for dash
+        obj_player_stats.stamina -= DASH_COST;
+        // set stamina regen time
+        obj_player_stats.alarm[0] = room_speed; 
+  }  
 }
 
 // check if attacking
