@@ -57,17 +57,11 @@
     <instance objName="obj_wall" x="0" y="320" name="inst_85ED35BB" locked="0" code="" scaleX="17" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="160" y="192" name="inst_4C1A63AB" locked="0" code="" scaleX="2" scaleY="-6" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="128" name="inst_D97B6B4E" locked="0" code="" scaleX="2" scaleY="7" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="320" y="192" name="inst_FBDCD247" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="320" y="160" name="inst_FBDCD247" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_view" x="64" y="64" name="inst_634F4D21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="64" y="128" name="inst_D24CD17F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="288" y="256" name="inst_6F5B4C42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="544" y="96" name="inst_100B1EDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_stats" x="96" y="64" name="inst_17B1F4F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="128" y="96" name="inst_71B5E9B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="544" y="256" name="inst_BD204792" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="256" y="64" name="inst_B497A3C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_slime" x="64" y="288" name="inst_B353BBDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="544" y="320" name="inst_8E671E54" locked="0" code="// teleport player upon collision&#xA;new_room = rm_2;&#xA;new_x = 64;&#xA;new_y = 36;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sign" x="320" y="256" name="inst_7F9B71EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

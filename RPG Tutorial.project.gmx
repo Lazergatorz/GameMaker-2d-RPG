@@ -24,6 +24,8 @@
     <sprite>sprites\spr_xp_point</sprite>
     <sprite>sprites\spr_health</sprite>
     <sprite>sprites\spr_health_full</sprite>
+    <sprite>sprites\spr_sign</sprite>
+    <sprite>sprites\spr_dialog_box1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -64,6 +66,9 @@
     <object>objects\obj_health_drop</object>
     <object>objects\obj_healthfull_drop</object>
     <object>objects\obj_door</object>
+    <object>objects\obj_speaker</object>
+    <object>objects\obj_dialog</object>
+    <object>objects\obj_sign</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
