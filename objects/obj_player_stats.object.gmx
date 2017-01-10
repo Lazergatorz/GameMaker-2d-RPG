@@ -177,8 +177,8 @@ switch(room_start_action){
         scr_load_game();
         break;
 }
-
-room_persistent = false;
+// reason for this code ?
+//room_persistent = false;
 room_start_action = NEW_ROOM;
 
 </string>

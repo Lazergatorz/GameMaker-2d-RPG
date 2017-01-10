@@ -21,7 +21,7 @@ if(gamepad_is_connected(0)){
     xaxis = gamepad_axis_value(0,gp_axislh);
     yaxis = gamepad_axis_value(0,gp_axislv);
     
-    // for menu nav
+    // TODO : for menu nav
     right_key = xaxis;
     left_key = xaxis;
     up_key = yaxis;
