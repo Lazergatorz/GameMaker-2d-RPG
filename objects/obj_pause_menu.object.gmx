@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,17 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init player stats
+            <string>/// init pause menu
 
-hp = 5;
-maxhp = hp;
-stamina = 10;
-maxstamina = stamina;
-level = 1;
-xp = 0;
-maxxp = 3;
-attackstr = 1;
-draw_set_colour(c_white);
+title = "Game Paused";
+
+option[0] = "Resume";
+option[1] = "Save";
+option[2] = "Load";
+option[3] = "Quit";
+
+// menu index
+
+menu_index = 0;
 </string>
           </argument>
         </arguments>
@@ -58,7 +59,7 @@ draw_set_colour(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// dash regen alarm
+            <string>///menu alarm
 </string>
           </argument>
         </arguments>
@@ -81,18 +82,36 @@ draw_set_colour(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// player stats update
+            <string>///update pause menu
 
-// prevent negative hp
-if (hp &lt; 0 ){
-    hp = 0;
-}
+// input delay
+if(alarm[0] &lt;= 0 ){
+    
+    if(obj_input.down_key ){ 
+        
+        // move and loop through menu 
+        if(menu_index &lt; array_length_1d(option) - 1){
+            menu_index++;
+        } else {
+            menu_index = 0;
+        }
+        //reset alarm
+        alarm[0] = room_speed/3;
+    }
+    
+    if(obj_input.up_key ){ 
+        
+        // move and loop through menu 
+        if(menu_index &gt; 0){
+            menu_index--;
+        } else {
+            menu_index = array_length_1d(option) - 1;
+        }
+        //reset alarm
+        alarm[0] = room_speed/3;
+    }
+        
 
-// stamina regen if stamina is not full and after dash timer has expired
-//(every room frame it fills back up with 1 )
-
-if (stamina &lt; maxstamina  &amp;&amp; alarm[0] == -1){
-    stamina++;
 }
 </string>
           </argument>
@@ -116,12 +135,31 @@ if (stamina &lt; maxstamina  &amp;&amp; alarm[0] == -1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the stats in the viewport
+            <string>///draw the pause menu
 
-draw_text(32,16, "HP: "+ string(hp) + "/" + string(maxhp));
-draw_text(32,32, "STA: "+ string(stamina) + "/" + string(maxstamina));
-draw_text(32,48, "LVL: "+ string(level));
-draw_text(32,64, "XP: "+ string(xp) + "/" + string(maxxp));
+//center
+var xx = display_get_gui_width() / 2;
+var yy = display_get_gui_height() / 2;
+
+//align 
+draw_set_halign(fa_center);
+
+//draw title
+draw_text(xx,yy-64,title)
+
+//draw menu
+for(var i=0; i &lt; array_length_1d(option); i++){
+    draw_set_colour(c_gray);
+    // if active position set to white
+    if(i == menu_index){
+        draw_set_colour(c_white);
+    }
+    draw_text(xx,yy+(i*32),option[i]);
+}
+
+// set draw back to defaults
+draw_set_colour(c_white);
+draw_set_halign(fa_left);
 </string>
           </argument>
         </arguments>

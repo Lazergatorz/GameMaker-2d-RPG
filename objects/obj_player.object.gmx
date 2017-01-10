@@ -46,10 +46,6 @@ facing = RIGHT;  //uses macro
 
 image_speed = 0;
 
-// input
-scr_get_input();
-
-
 // player state
 state = scr_player_move_state;
 </string>

@@ -1,11 +1,7 @@
 ///scr_player_move_state()
 
-// get inputs
-
-scr_get_input();
-
 // handle interact key/button (formerly dash key)
-if (dash_key){   
+if (obj_input.dash_key){   
 
     // field of player view to check (8 px wide)
     var xdir = lengthdir_x(8, facing*90);
@@ -44,7 +40,7 @@ if (dash_key){
 }
 
 // check if attacking
-if (attack_key){   
+if (obj_input.attack_key){   
     // reset to frame 0 for attack anim
     image_index = 0;
     state = scr_player_attack_state;    
@@ -63,10 +59,10 @@ if(len == 0) image_index = 0;
 
 
 // determine movement direction in 360
-dir = point_direction(0,0,xaxis,yaxis);
+dir = point_direction(0,0,obj_input.xaxis,obj_input.yaxis);
 
 // determine movement length
-if (xaxis == 0 && yaxis ==0){
+if (obj_input.xaxis == 0 && obj_input.yaxis ==0){
     len = 0; //we're standing still
 }else{
     len = spd; // we're moving

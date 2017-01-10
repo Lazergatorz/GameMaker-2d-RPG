@@ -70,10 +70,13 @@
     <object>objects\obj_speaker</object>
     <object>objects\obj_dialog</object>
     <object>objects\obj_sign</object>
+    <object>objects\obj_input</object>
+    <object>objects\obj_pause_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
     <room>rooms\rm_2</room>
+    <room>rooms\rm_pause_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,40 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init player stats
+            <string>/// init input
 
-hp = 5;
-maxhp = hp;
-stamina = 10;
-maxstamina = stamina;
-level = 1;
-xp = 0;
-maxxp = 3;
-attackstr = 1;
-draw_set_colour(c_white);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// dash regen alarm
+scr_get_input();
+
+// keep track of rooms for pause menu
+previous_room = room;
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -81,25 +57,37 @@ draw_set_colour(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// player stats update
+            <string>/// get input
 
-// prevent negative hp
-if (hp &lt; 0 ){
-    hp = 0;
-}
+scr_get_input();
 
-// stamina regen if stamina is not full and after dash timer has expired
-//(every room frame it fills back up with 1 )
+// pause 
 
-if (stamina &lt; maxstamina  &amp;&amp; alarm[0] == -1){
-    stamina++;
+if(pause_key){
+    if(room != rm_pause_menu){
+        // make sure player and stats do not appear in pause menu (room)
+        if(instance_exists(obj_player)){
+            obj_player.persistent = false; 
+        }
+        if(instance_exists(obj_player_stats)){
+            obj_player_stats.persistent = false; 
+        }
+        // store room player is in before pause
+        previous_room = room;
+        // display pause menu
+        room_goto(rm_pause_menu);
+        
+    } else {
+        // exit pause screen and display room player was in
+        room_goto(previous_room);        
+    }
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -116,12 +104,12 @@ if (stamina &lt; maxstamina  &amp;&amp; alarm[0] == -1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the stats in the viewport
+            <string>///set back persistence
 
-draw_text(32,16, "HP: "+ string(hp) + "/" + string(maxhp));
-draw_text(32,32, "STA: "+ string(stamina) + "/" + string(maxstamina));
-draw_text(32,48, "LVL: "+ string(level));
-draw_text(32,64, "XP: "+ string(xp) + "/" + string(maxxp));
+if(instance_exists(obj_player)){
+    obj_player.persistent = true;
+    obj_player_stats.persistent = true;
+}
 </string>
           </argument>
         </arguments>
