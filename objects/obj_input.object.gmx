@@ -85,6 +85,8 @@ scr_get_input();
 
 if(instance_exists(obj_player)){
     obj_player.persistent = true;
+    // coming out of pause screen, ensure the stats are displayed again
+    obj_player_stats.visible = true;
     obj_player_stats.persistent = true;
 }
 </string>

@@ -310,9 +310,12 @@ if(state == scr_player_attack_state){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// fix rotation 
+            <string>///player room start
 
+// fix player rotation
 phy_fixed_rotation = true;
+persistent = true;
+
 </string>
           </argument>
         </arguments>

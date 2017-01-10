@@ -119,6 +119,7 @@ if(alarm[0] &lt;= 0 ){
         switch(menu_index){
             case 0:
                 // resume game 
+                obj_player_stats.room_start_action = RESUME;
                 room_goto(obj_player_stats.previous_room);
                 break;
             case 1:
@@ -126,6 +127,9 @@ if(alarm[0] &lt;= 0 ){
                 scr_save_game();
                 break;
             case 2:
+                // load game
+                obj_player_stats.room_start_action = LOAD;
+                room_goto(obj_player_stats.previous_room);
                 break;                        
             case 3:   
                 // exit game
