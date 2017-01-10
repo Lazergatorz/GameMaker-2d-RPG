@@ -36,6 +36,7 @@
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_get_facing.gml</script>
       <script>scripts\scr_chance.gml</script>
+      <script>scripts\scr_str_copy_words.gml</script>
     </scripts>
     <scripts name="Player states">
       <script>scripts\scr_player_move_state.gml</script>
@@ -80,6 +81,6 @@
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName>C:\Users\Jeroen\AppData\Local\GameMaker-Studio\tutorials\My_First_Game\</TutorialName>
-    <TutorialPage>0</TutorialPage>
+    <TutorialPage>11</TutorialPage>
   </TutorialState>
 </assets>

@@ -62,19 +62,31 @@ margin = 8;
             <kind>1</kind>
             <string>/// draw dialog on GUI layer
 
-text_count += spd; // set chars to show per update to spd value
+// get the last space in the text
+if(string_char_at(text[text_page],text_count) == " "){
+    last_space = text_count;
+}
+
+// add 'smart' CRLF in place of space when we reach the margin of the dialog box
+var text_words = scr_str_copy_words(text[text_page], 1, text_count);
+if(string_width(text_words) &gt;= width-(margin*2)){
+    // remove the space 
+    text[text_page] = string_delete(text[text_page], last_space, 1);
+    // add a CRLF at the removed space position
+    text[text_page] = string_insert("#",text[text_page], last_space);
+}
+
 // render the text from the set page in increments the size of text_count, 
-// starting from the beginning
 text_visible = string_copy(text[text_page],0,text_count);
 // position the text, taking into account the view dimensions
 var xx = (x-view_xview[0])*display_scale;
 var yy = (y-view_yview[0])*display_scale;
-// now draw into gui, taking into account the margins and adding auto CRLF
+
+// now draw into gui
 draw_text_ext(xx + margin, yy + margin, text_visible, -1, width-(margin*2));
 
-
-
-
+// set chars to show per update to spd value
+text_count += spd; 
 </string>
           </argument>
         </arguments>
