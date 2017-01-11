@@ -21,6 +21,7 @@
     </sprites>
     <sprite>sprites\spr_enemy_slime</sprite>
     <sprite>sprites\spr_damage</sprite>
+    <sprite>sprites\spr_projectile1</sprite>
     <sprite>sprites\spr_xp_point</sprite>
     <sprite>sprites\spr_health</sprite>
     <sprite>sprites\spr_health_full</sprite>
@@ -74,6 +75,7 @@
     <object>objects\obj_sign</object>
     <object>objects\obj_input</object>
     <object>objects\obj_pause_menu</object>
+    <object>objects\obj_projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>

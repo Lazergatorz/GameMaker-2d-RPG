@@ -39,7 +39,23 @@ if (obj_input.dash_key){
   }  
 }
 
-// check if attacking
+
+// handle ranged key
+if (obj_input.ranged_key){   
+    // create projectile
+    var p = instance_create(x,y, obj_projectile);
+    // speed and direction of projectile
+    var xforce = lengthdir_x(7, facing*90);
+    var yforce = lengthdir_y(7, facing*90);
+    // set creator
+    p.creator = id;  
+    // shoot (apply force) to projectile
+    with(p){
+        physics_apply_impulse(x,y,xforce,yforce);
+    }
+}
+
+// handle attack key
 if (obj_input.attack_key){   
     // reset to frame 0 for attack anim
     image_index = 0;
