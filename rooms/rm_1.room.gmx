@@ -63,6 +63,7 @@
     <instance objName="obj_door" x="544" y="320" name="inst_8E671E54" locked="0" code="// teleport player upon collision&#xA;new_room = rm_2;&#xA;new_x = 64;&#xA;new_y = 36;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sign" x="544" y="288" name="inst_7F9B71EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_input" x="64" y="96" name="inst_C12AADA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_chinlin" x="480" y="64" name="inst_3726D31A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

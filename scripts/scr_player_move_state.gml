@@ -88,7 +88,7 @@ if (obj_input.xaxis == 0 && obj_input.yaxis ==0){
 }else{
     len = spd; // we're moving
     // set the direction we're moving for animation
-    scr_get_facing();
+    scr_get_facing(dir);
 }
 
 /// control sprites
