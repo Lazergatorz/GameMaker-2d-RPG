@@ -306,6 +306,7 @@ with (obj_player_stats){
 
 if(state == scr_player_attack_state){
     state = scr_player_move_state; //back to move state
+    movement = MOVE;
     hasattacked = false; // reset attack
 }
 </string>

@@ -100,12 +100,15 @@ sprite[DOWN,IDLE] = spr_chinlin_stand_down;
 // always drop xp point at enemy pos
 instance_create(x,y,obj_xp_point);
 
-// randomly drop health packs 50% chance)
-if(scr_chance(.5)){
+// randomly drop health packs (50% chance) , but only if player is not full hp
+if(scr_chance(.5) &amp;&amp; obj_player_stats.hp &lt; obj_player_stats.maxhp){
     instance_create(x+random_range(-7,7),y+random_range(-7,7),obj_health_drop); // prevent it from dropping on top of other loot
-} else if (scr_chance(.25)){
+    
+    // 25% chance to drop full health packs if player is below a certain hp threshold (scales with level)
+} else if (scr_chance(.25) &amp;&amp; obj_player_stats.hp &lt; floor(obj_player_stats.maxhp / obj_player_stats.level)){
     instance_create(x+random_range(-7,7),y+random_range(-7,7),obj_healthfull_drop); // prevent it from dropping on top of other loot
 }
+
 
 
 
@@ -255,8 +258,9 @@ if(state != scr_enemy_stall_state){
     // create the damage object on the player with 1px offset for knockback
     var damage = instance_create(other.x+xdir, other.y+ydir, obj_damage);
     damage.creator = id; 
-    // override to smaller knockback (player is stronger than slime, right?)
-    damage.knockback = 5; 
+    // override knockback
+    damage.knockback = 6; 
+    damage.damage = 2; 
     // reset attack to next frame
     state = scr_enemy_stall_state;
     alarm[1] = room_speed;

@@ -1,6 +1,8 @@
-///scr_attack_state
+///scr_attack_state()
 
 image_speed = .5;
+
+// set sprite directions 
 movement = ATTACK;
 
 // deal damage once upon a particular attack anim frame
