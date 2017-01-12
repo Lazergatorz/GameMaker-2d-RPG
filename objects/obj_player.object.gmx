@@ -41,6 +41,7 @@ yaxis = 0;
 dir = 0;
 hasattacked = false;
 facing = RIGHT;  //uses macro
+movement = MOVE;
 
 // idle animation
 
@@ -48,6 +49,21 @@ image_speed = 0;
 
 // player state
 state = scr_player_move_state;
+
+
+// player sprite control (using macros)
+
+// moving
+sprite[RIGHT,MOVE] = spr_player_right;
+sprite[UP,MOVE] = spr_player_up;
+sprite[LEFT,MOVE] = spr_player_left;
+sprite[DOWN,MOVE] = spr_player_down;
+
+// attacking
+sprite[RIGHT,ATTACK] = spr_player_attack_right;
+sprite[UP,ATTACK] = spr_player_attack_up;
+sprite[LEFT,ATTACK] = spr_player_attack_left;
+sprite[DOWN,ATTACK] = spr_player_attack_down;
 </string>
           </argument>
         </arguments>
@@ -103,6 +119,10 @@ state = scr_player_move_state;
 depth = -y;
 // set player state
 script_execute(state);
+
+// update player sprites
+
+sprite_index = sprite[facing,movement];
 
 // player death check
 if(obj_player_stats.hp &lt;= 0){

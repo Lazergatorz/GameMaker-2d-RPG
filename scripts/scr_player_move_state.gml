@@ -1,5 +1,9 @@
 ///scr_player_move_state()
 
+// set player sprite set
+
+movemenet = MOVE;
+
 // handle interact key/button (formerly dash key)
 if (obj_input.dash_key){   
 
@@ -57,6 +61,7 @@ if (obj_input.ranged_key){
 
 // handle attack key
 if (obj_input.attack_key){   
+    
     // reset to frame 0 for attack anim
     image_index = 0;
     state = scr_player_attack_state;    
@@ -90,21 +95,4 @@ if (obj_input.xaxis == 0 && obj_input.yaxis ==0){
 
 // anim speed
 image_speed = .2;
-
-// determine sprite facing for animation
-switch (facing){
-    case RIGHT:
-        sprite_index = spr_player_right;
-        break;
-    case UP:
-        sprite_index = spr_player_up;
-        break;
-    case LEFT:
-        sprite_index = spr_player_left;
-        break;
-    case DOWN:    
-        sprite_index = spr_player_down;
-        break;        
-}
-
 

@@ -1,5 +1,7 @@
 ///scr_player_dash_state()
 
+movement = MOVE;
+
 if (len == 0)
 {   
     // fix dashing direction when standing still
