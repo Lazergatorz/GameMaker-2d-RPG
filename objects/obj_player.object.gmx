@@ -186,6 +186,7 @@ if(room_exists(other.new_room)){
 
 with(other){
     instance_destroy();
+    audio_play_sound(snd_xp, 6, false);
 }
 
 with (obj_player_stats){
@@ -220,6 +221,7 @@ with (obj_player_stats){
 
 with(other){
     instance_destroy();
+    audio_play_sound(snd_xp, 6, false);
 }
 
 with (obj_player_stats){
@@ -253,6 +255,8 @@ with (obj_player_stats){
 // pick up on collision and add xp
 with(other){
     instance_destroy();
+    // play xp pickup sound
+    audio_play_sound(snd_xp, 6, false);
 }
 
 with (obj_player_stats){

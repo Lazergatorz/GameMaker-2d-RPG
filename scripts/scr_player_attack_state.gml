@@ -27,7 +27,9 @@ if(image_index >= 3 && hasattacked == false){
             xx=x;
             yy=y+12;
             break;    
-    }       
+    }  
+    // play attack sound
+    audio_play_sound(snd_sword_attack2,8,false);     
     var damage = instance_create(xx,yy,obj_damage); //instantiate damage object to collide 
     damage.creator = id; // set originator
     // set damage to current level attack strength

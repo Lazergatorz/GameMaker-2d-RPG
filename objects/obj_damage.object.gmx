@@ -88,6 +88,10 @@ instance_destroy();
 if (other.id != creator){
 
     obj_player_stats.hp -= damage; // deal damage
+    // player damage sound 
+    
+    audio_play_sound(snd_player_takes_damage, 9, false);
+    
     // apply knockback effect
     if(instance_exists(creator)){
         // direction from target to creator of damage

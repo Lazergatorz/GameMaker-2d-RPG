@@ -71,6 +71,8 @@ sight = 64;
             <kind>1</kind>
             <string>/// enemy death handler
 
+audio_play_sound(snd_enemy_die, 5, false);
+
 //loot drops
 
 // always drop xp point at enemy pos
