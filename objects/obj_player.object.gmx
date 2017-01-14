@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///init player
 
+// fix duplicate player instances (is this still necessary?)
+if(instance_number(obj_player) &gt; 1) instance_destroy();
+
 // inherit from parent
 event_inherited();
 
@@ -39,9 +42,10 @@ len = 0
 xaxis = 0;
 yaxis = 0;
 dir = 0;
-hasattacked = false;
 facing = RIGHT;  //uses macro
 movement = MOVE;
+// default weapon
+weapon = obj_sword;
 
 // idle animation
 
