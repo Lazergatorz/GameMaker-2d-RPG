@@ -7,11 +7,11 @@ movement = ATTACK;
 
 // render the equipped weapon at the right frame
 if(scr_ani_hit_frame(2)){
-    var attack_animation = instance_create(x,y, weapon);
+    var attack_animation = instance_create(x,y, obj_weapon_ani);
     // set the direction of the weapon to the right angle
     attack_animation.dir = facing * 90;
     attack_animation.image_angle = (facing*90)+45;
-    
+    attack_animation.sprite_index = weapon_sprite;
 }
 
 // deal damage once upon a particular attack anim frame

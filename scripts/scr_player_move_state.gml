@@ -67,6 +67,18 @@ if (obj_input.attack_key){
     state = scr_player_attack_state;    
 }
 
+
+// handle swap key
+if (obj_input.swap_key){   
+    // pick up the item on the ground near to us... 
+    var nearest_weapon = instance_nearest(x,y,obj_weapon_item);
+    //...if we're next to it and close enough to collide with it
+    if(place_meeting(x,y+4,nearest_weapon )){
+        scr_swap_weapons(nearest_weapon);
+    }        
+}
+
+
 // set the horizontal and vertical speed
 hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);

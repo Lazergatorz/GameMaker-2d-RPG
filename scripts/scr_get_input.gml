@@ -11,6 +11,7 @@ down_key = keyboard_check(vk_down);
 dash_key = keyboard_check_pressed(ord('C'));
 attack_key = keyboard_check_pressed(ord('X'));
 ranged_key = keyboard_check_pressed(ord('V'));
+swap_key = keyboard_check_pressed(ord('Z'));
 pause_key = keyboard_check_pressed(vk_escape);
 
 
@@ -28,5 +29,7 @@ if(gamepad_is_connected(0)){
     dash_key = gamepad_button_check_pressed(0,gp_face1); // xbox A button
     attack_key = gamepad_button_check_pressed(0,gp_face3); // xbox X button    
     ranged_key = gamepad_button_check_pressed(0,gp_face4); // xbox Y button
+    swap_key = gamepad_button_check_pressed(0,gp_face2); // xbox B button
     pause_key = gamepad_button_check_pressed(0,gp_start); // xbox start button
+
 }

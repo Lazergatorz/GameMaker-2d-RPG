@@ -45,7 +45,7 @@ dir = 0;
 facing = RIGHT;  //uses macro
 movement = MOVE;
 // default weapon
-weapon = obj_sword;
+weapon_sprite = spr_sword;
 
 // idle animation
 
@@ -371,6 +371,8 @@ persistent = true;
 
 draw_sprite(spr_player_shadow,image_index,x,y);
 draw_self();
+
+
 </string>
           </argument>
         </arguments>
