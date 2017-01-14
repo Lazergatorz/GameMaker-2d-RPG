@@ -103,8 +103,8 @@ if (obj_input.xaxis == 0 && obj_input.yaxis ==0){
     scr_get_facing(dir);
 }
 
-/// control sprites
 
+// control sprites
 // anim speed
 image_speed = .2;
 

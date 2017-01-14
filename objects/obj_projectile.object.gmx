@@ -120,6 +120,10 @@ if(other.id != creator){
     var yforce= lengthdir_y(knockback, dir); // amount of distance y
     // apply to target
     with (other){
+        // take wound sound
+        // TODO : refactor to abstraction layer for more than just enemies
+        scr_enemy_wound_sound(name);       
+        //knockback
         // executes in target
         physics_apply_impulse(x,y,xforce,yforce);
     }

@@ -47,6 +47,8 @@ yaxis = 0;
 // enemy sight in pixels (aggro range)
 sight = 64;
 
+// enemy display name
+name = "Slime";
 </string>
           </argument>
         </arguments>
@@ -235,6 +237,8 @@ if(state != scr_enemy_stall_state){
     damage.creator = id; 
     // override to smaller knockback (player is stronger than slime, right?)
     damage.knockback = 5; 
+    // play attack sound 
+    scr_enemy_attack_sound(self.name);
     // reset attack to next frame
     state = scr_enemy_stall_state;
     alarm[1] = room_speed;

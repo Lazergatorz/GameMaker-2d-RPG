@@ -7,8 +7,8 @@
   <sounds name="sound">
     <sounds name="Player">
       <sound>sound\snd_player_takes_damage</sound>
-      <sound>sound\snd_player_low_health</sound>
       <sound>sound\snd_player_death</sound>
+      <sound>sound\snd_player_low_health</sound>
     </sounds>
     <sounds name="Enemy">
       <sounds name="Attack">
@@ -24,7 +24,7 @@
       </sounds>
     </sounds>
     <sounds name="Game">
-      <sound>sound\snd_xp</sound>
+      <sound>sound\snd_pickup_xp</sound>
       <sound>sound\snd_pickup_full_health</sound>
       <sound>sound\snd_pickup_health2</sound>
       <sound>sound\snd_pickup_health</sound>
@@ -93,6 +93,7 @@
       <script>scripts\scr_load_game.gml</script>
       <script>scripts\scr_ani_hit_frame.gml</script>
       <script>scripts\scr_swap_weapons.gml</script>
+      <script>scripts\scr_player_low_health.gml</script>
     </scripts>
     <scripts name="Player states">
       <script>scripts\scr_player_move_state.gml</script>
@@ -108,6 +109,8 @@
         <script>scripts\scr_enemy_choose_next_state.gml</script>
         <script>scripts\scr_check_for_player.gml</script>
         <script>scripts\scr_move_enemy.gml</script>
+        <script>scripts\scr_enemy_attack_sound.gml</script>
+        <script>scripts\scr_enemy_wound_sound.gml</script>
       </scripts>
     </scripts>
   </scripts>

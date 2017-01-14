@@ -191,7 +191,7 @@ if(room_exists(other.new_room)){
 
 with(other){
     instance_destroy();
-    audio_play_sound(snd_xp, 6, false);
+    audio_play_sound(snd_pickup_full_health, 6, false);
 }
 
 with (obj_player_stats){
@@ -226,7 +226,7 @@ with (obj_player_stats){
 
 with(other){
     instance_destroy();
-    audio_play_sound(snd_xp, 6, false);
+    audio_play_sound(choose(snd_pickup_health,snd_pickup_health2), 6, false)
 }
 
 with (obj_player_stats){
@@ -261,7 +261,7 @@ with (obj_player_stats){
 with(other){
     instance_destroy();
     // play xp pickup sound
-    audio_play_sound(snd_xp, 6, false);
+    audio_play_sound(snd_pickup_xp, 6, false);
 }
 
 with (obj_player_stats){
@@ -311,13 +311,21 @@ with (obj_player_stats){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///end attack animation
+            <string>/// handle animation end
 
 if(state == scr_player_attack_state){
     state = scr_player_move_state; //back to move state
     movement = MOVE;
     hasattacked = false; // reset attack
 }
+
+
+// player low health check every move ani
+// TODO : scale with level 
+if(obj_player_stats.hp &lt; obj_player_stats.maxhp/2){
+    scr_player_low_health();
+}    
+
 </string>
           </argument>
         </arguments>

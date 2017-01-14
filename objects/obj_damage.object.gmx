@@ -152,6 +152,10 @@ if (other.id != creator){
     // apply to target
     with (other){
         // executes in target
+        // take wound sound
+        // TODO : refactor to abstraction layer for more than just enemies
+        scr_enemy_wound_sound(name);
+        //knockback
         physics_apply_impulse(x,y,xforce,yforce);
     }
 }

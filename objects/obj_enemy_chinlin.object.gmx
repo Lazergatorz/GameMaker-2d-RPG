@@ -34,6 +34,9 @@ event_inherited();
 spd = 1;
 image_speed = .2;
 
+// display name
+name = "Chinlin";
+
 // enemy state
 state = scr_enemy_idle_state;
 
@@ -263,6 +266,8 @@ if(state != scr_enemy_stall_state){
     // override knockback
     damage.knockback = 6; 
     damage.damage = 2; 
+     // play attack sound 
+    scr_enemy_attack_sound(self.name);
     // reset attack to next frame
     state = scr_enemy_stall_state;
     alarm[1] = room_speed;
