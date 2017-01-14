@@ -87,9 +87,8 @@ menu_index = 0;
 // menu input delay
 if(alarm[0] &lt;= 0 ){
     
-    // menu nav
-    
-    if(obj_input.down_key ){ 
+    // menu nav    
+    if(obj_input.down_key || obj_input.yaxis &gt; .5){ 
         
         // move down and loop through menu 
         if(menu_index &lt; array_length_1d(option) - 1){
@@ -101,7 +100,7 @@ if(alarm[0] &lt;= 0 ){
         alarm[0] = room_speed/3;
     }
     
-    if(obj_input.up_key ){ 
+    if(obj_input.up_key || obj_input.yaxis &lt; -.5){ 
         
         // move up and loop through menu 
         if(menu_index &gt; 0){

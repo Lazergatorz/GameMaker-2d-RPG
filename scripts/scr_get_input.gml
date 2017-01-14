@@ -24,13 +24,7 @@ if(gamepad_is_connected(0)){
     gamepad_set_axis_deadzone(0, .35);
     xaxis = gamepad_axis_value(0,gp_axislh);
     yaxis = gamepad_axis_value(0,gp_axislv);
-    
-    // for menu nav
-    right_key = gamepad_button_check_pressed(0,gp_padr); // xbox d-pad R
-    left_key = gamepad_button_check_pressed(0,gp_padl); // xbox d-pad L
-    up_key = gamepad_button_check_pressed(0,gp_padu); // xbox d-pad U
-    down_key = gamepad_button_check_pressed(0,gp_padd); // xbox d-pad D
-    
+        
     dash_key = gamepad_button_check_pressed(0,gp_face1); // xbox A button
     attack_key = gamepad_button_check_pressed(0,gp_face3); // xbox X button    
     ranged_key = gamepad_button_check_pressed(0,gp_face4); // xbox Y button
