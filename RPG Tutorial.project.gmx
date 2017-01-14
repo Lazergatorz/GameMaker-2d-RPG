@@ -5,10 +5,34 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\snd_player_takes_damage</sound>
-    <sound>sound\snd_sword_attack2</sound>
-    <sound>sound\snd_xp</sound>
-    <sound>sound\snd_enemy_die</sound>
+    <sounds name="Player">
+      <sound>sound\snd_player_takes_damage</sound>
+      <sound>sound\snd_player_low_health</sound>
+      <sound>sound\snd_player_death</sound>
+    </sounds>
+    <sounds name="Enemy">
+      <sounds name="Attack">
+        <sound>sound\snd_slime_attack</sound>
+        <sound>sound\snd_chinlin_attack</sound>
+      </sounds>
+      <sounds name="Wound">
+        <sound>sound\snd_slime_wound</sound>
+        <sound>sound\snd_chinlin_wound</sound>
+      </sounds>
+      <sounds name="Death">
+        <sound>sound\snd_enemy_die</sound>
+      </sounds>
+    </sounds>
+    <sounds name="Game">
+      <sound>sound\snd_xp</sound>
+      <sound>sound\snd_pickup_full_health</sound>
+      <sound>sound\snd_pickup_health2</sound>
+      <sound>sound\snd_pickup_health</sound>
+    </sounds>
+    <sounds name="Gear">
+      <sound>sound\snd_sword_attack</sound>
+      <sound>sound\snd_axe_swing</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Gear">

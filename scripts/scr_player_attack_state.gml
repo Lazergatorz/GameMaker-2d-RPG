@@ -38,7 +38,7 @@ if(scr_ani_hit_frame(3)){
             break;    
     }  
     // play attack sound
-    audio_play_sound(snd_sword_attack2,8,false);     
+    audio_play_sound(snd_sword_attack,8,false);     
     var damage = instance_create(xx,yy,obj_damage); //instantiate damage object to collide 
     damage.creator = id; // set originator
     // set damage to current level attack strength
