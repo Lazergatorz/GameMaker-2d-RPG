@@ -222,7 +222,7 @@
             <component id="sendPan" powered="true"/>
           </sendSlot>
         </sendList>
-        <audioClip clipAutoCrossfade="true" crossFadeHeadClipID="-1" crossFadeTailClipID="-1" endPoint="89759" fileID="0" hue="-1" id="0" lockedInTime="false" looped="false" name="player death 1" offline="false" select="true" sourceInPoint="0" sourceOutPoint="89759" startPoint="0" zOrder="3">
+        <audioClip clipAutoCrossfade="true" crossFadeHeadClipID="-1" crossFadeTailClipID="-1" endPoint="55255" fileID="0" hue="-1" id="0" lockedInTime="false" looped="false" name="player death 1" offline="false" select="true" sourceInPoint="34504" sourceOutPoint="89759" startPoint="0" zOrder="6">
           <component componentID="Audition.Fader" id="clipGain" name="volume" powered="true">
             <parameter index="0" name="volume" parameterValue="1"/>
             <parameter index="1" name="static gain" parameterValue="1"/>
@@ -235,8 +235,8 @@
             <parameter index="0" name="Pan" parameterValue="0"/>
           </component>
           <fadeIn crossFadeLinkType="linkedAsymmetric" endPoint="0" shape="0" startPoint="0" type="cosine"/>
-          <fadeOut crossFadeLinkType="linkedAsymmetric" endPoint="89759" shape="0" startPoint="89759" type="cosine"/>
-          <clipStretch adaptiveWindowSize="37" pitchAdjustment="3" preserveFormants="true" stretchMode="realtime" stretchQuality="high" stretchRatio="0.6277116522371568" stretchType="solo" transientSensitivity="40"/>
+          <fadeOut crossFadeLinkType="linkedAsymmetric" endPoint="55255" shape="0" startPoint="55255" type="cosine"/>
+          <clipStretch adaptiveWindowSize="37" pitchAdjustment="7" preserveFormants="true" stretchMode="realtime" stretchQuality="high" stretchRatio="0.6277116522371568" stretchType="solo" transientSensitivity="40"/>
           <editParameter parameterIndex="0" slotIndex="4294967281"/>
           <editParameter parameterIndex="0" slotIndex="4294967280"/>
           <channelMap>
@@ -1226,7 +1226,7 @@
     </tracks>
     <sessionState ctiPosition="0" smpteStart="0">
       <selectionState selectionDuration="0" selectionStart="0"/>
-      <viewState horizontalViewDuration="1323000" horizontalViewStart="0" trackControlsWidth="224" verticalScrollOffset="0"/>
+      <viewState horizontalViewDuration="1323000" horizontalViewStart="0" trackControlsWidth="237" verticalScrollOffset="0"/>
       <timeFormatState beatsPerBar="4" beatsPerMinute="120,00" customFrameRate="12" linkToDefaultTimeSettings="true" noteLength="4" subdivisions="16" timeCodeDropFrame="false" timeCodeFrameRate="30" timeCodeNTSC="false" timeFormat="timeFormatDecimal"/>
     </sessionState>
     <xmpMetadata><![CDATA[<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -1236,15 +1236,15 @@
             xmlns:xmp="http://ns.adobe.com/xap/1.0/">
          <xmp:CreatorTool>Adobe Audition CS6 (Windows)</xmp:CreatorTool>
          <xmp:CreateDate>2017-01-14T20:24:04+01:00</xmp:CreateDate>
-         <xmp:MetadataDate>2017-01-14T20:27:39+01:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2017-01-14T20:27:39+01:00</xmp:ModifyDate>
+         <xmp:MetadataDate>2017-01-14T21:57:44+01:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2017-01-14T21:57:44+01:00</xmp:ModifyDate>
       </rdf:Description>
       <rdf:Description rdf:about=""
             xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
             xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
             xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#">
-         <xmpMM:InstanceID>xmp.iid:4C3BFF828FDAE611B739DA97796A0915</xmpMM:InstanceID>
-         <xmpMM:DocumentID>xmp.did:D9BD03038FDAE611B739DA97796A0915</xmpMM:DocumentID>
+         <xmpMM:InstanceID>xmp.iid:6BF551A39BDAE6119C9D969F540A2CA4</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:65F551A39BDAE6119C9D969F540A2CA4</xmpMM:DocumentID>
          <xmpMM:OriginalDocumentID>xmp.did:D6BD03038FDAE611B739DA97796A0915</xmpMM:OriginalDocumentID>
          <xmpMM:History>
             <rdf:Seq>
@@ -1297,11 +1297,39 @@
                   <stEvt:softwareAgent>Adobe Audition CS6 (Windows)</stEvt:softwareAgent>
                   <stEvt:changed>/</stEvt:changed>
                </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:64F551A39BDAE6119C9D969F540A2CA4</stEvt:instanceID>
+                  <stEvt:when>2017-01-14T21:55:20+01:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CS6 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:65F551A39BDAE6119C9D969F540A2CA4</stEvt:instanceID>
+                  <stEvt:when>2017-01-14T21:55:20+01:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CS6 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:6AF551A39BDAE6119C9D969F540A2CA4</stEvt:instanceID>
+                  <stEvt:when>2017-01-14T21:57:44+01:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CS6 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:6BF551A39BDAE6119C9D969F540A2CA4</stEvt:instanceID>
+                  <stEvt:when>2017-01-14T21:57:44+01:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CS6 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
             </rdf:Seq>
          </xmpMM:History>
          <xmpMM:DerivedFrom rdf:parseType="Resource">
-            <stRef:instanceID>xmp.iid:D8BD03038FDAE611B739DA97796A0915</stRef:instanceID>
-            <stRef:documentID>xmp.did:D6BD03038FDAE611B739DA97796A0915</stRef:documentID>
+            <stRef:instanceID>xmp.iid:64F551A39BDAE6119C9D969F540A2CA4</stRef:instanceID>
+            <stRef:documentID>xmp.did:D9BD03038FDAE611B739DA97796A0915</stRef:documentID>
             <stRef:originalDocumentID>xmp.did:D6BD03038FDAE611B739DA97796A0915</stRef:originalDocumentID>
          </xmpMM:DerivedFrom>
       </rdf:Description>
@@ -1538,7 +1566,7 @@
   </session>
 
   <files>
-    <file absolutePath="C:\Users\Jeroen\Documents\GameMaker\Projects\RPG Tutorial.gmx\sounds\player death 1.ogg" id="0" mediaHandler="AmioLSF" relativePath="../player death 1.ogg"/>
+    <file absolutePath="C:\Users\Jeroen\Documents\GameMaker\Projects\RPG Tutorial.gmx\org sounds\player death 1.ogg" id="0" mediaHandler="AmioLSF" relativePath="../player death 1.ogg"/>
   </files>
 
   <audioDevice inputID="" outputID="2259F4A6-DC8A-4362-8F3D-0D7042C66DB6">

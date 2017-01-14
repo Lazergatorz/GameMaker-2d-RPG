@@ -31,7 +31,7 @@
     </sounds>
     <sounds name="Gear">
       <sound>sound\snd_sword_attack</sound>
-      <sound>sound\snd_axe_swing</sound>
+      <sound>sound\snd_axe_attack</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

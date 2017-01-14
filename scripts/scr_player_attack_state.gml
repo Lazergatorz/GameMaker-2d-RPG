@@ -37,8 +37,21 @@ if(scr_ani_hit_frame(3)){
             yy=y+12;
             break;    
     }  
+    
     // play attack sound
+    // TODO : make script for playing the right weapon sounds
+    switch(weapon_sprite){
+        case spr_sword:
+        default:
+            audio_play_sound(snd_sword_attack,8,false);         
+            break;
+        case spr_axe:
+            audio_play_sound(snd_axe_attack,8,false);        
+            break;
+    }
+    
     audio_play_sound(snd_sword_attack,8,false);     
+    
     var damage = instance_create(xx,yy,obj_damage); //instantiate damage object to collide 
     damage.creator = id; // set originator
     // set damage to current level attack strength

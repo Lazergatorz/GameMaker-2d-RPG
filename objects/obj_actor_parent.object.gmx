@@ -61,7 +61,7 @@ depth = -y;
 
 //death
 if(hp &lt;=0){
-    instance_destroy();
+   instance_destroy();
 }
 </string>
           </argument>

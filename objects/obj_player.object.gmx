@@ -130,6 +130,7 @@ sprite_index = sprite[facing,movement];
 
 // player death check
 if(obj_player_stats.hp &lt;= 0){
+    audio_play_sound(snd_player_death,10,false);         
     instance_destroy();
 }
 </string>
